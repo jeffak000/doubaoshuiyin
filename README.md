@@ -15,7 +15,7 @@
 ## 安装
 
 1. 给浏览器安装用户脚本管理器：Tampermonkey（推荐）或 Violentmonkey。
-2. 下载本仓库的 `doubao-gailiuzi.zip`，解压得到 `doubao-downloader.user.js`。
+2. 在右侧 **Releases** 中下载 `doubao-gailiuzi.zip`（或本仓库根目录同名文件），解压得到 `doubao-downloader.user.js`。
 3. 把 `doubao-downloader.user.js` 拖入脚本管理器页面，点击安装。
 4. 打开豆包聊天页（doubao.com/chat）或 DolaAI，生成视频后即可在右下角看到「下载无水印」按钮。
 
