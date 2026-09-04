@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gai溜子豆包去水印工具</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        width: 380px;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(160deg, #f6fffa 0%, #ecfdf5 100%);
+        color: #1f2937;
+        line-height: 1.6;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Microsoft YaHei", sans-serif;
+      }
+      .container { padding: 20px; }
+
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        padding-bottom: 14px;
+        border-bottom: 1px dashed #c6f6d5;
+      }
+      .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        object-fit: contain;
+        box-shadow: 0 4px 10px rgba(0, 168, 107, 0.25);
+      }
+      .title-wrap { display: flex; flex-direction: column; }
+      .title {
+        font-size: 17px;
+        font-weight: 700;
+        color: #0f5132;
+        letter-spacing: 0.3px;
+      }
+      .ver {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+      .ver .badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #00d97e, #00a86b);
+        color: #fff;
+        font-weight: 600;
+        padding: 1px 7px;
+        border-radius: 8px;
+        font-size: 10px;
+        margin-left: 4px;
+      }
+
+      .lead {
+        font-size: 13.5px;
+        color: #374151;
+        margin: 0 0 14px;
+        background: #fff;
+        border-left: 3px solid #00a86b;
+        padding: 10px 12px;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      }
+      .lead b { color: #00a86b; }
+
+      .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+      .feature {
+        background: #fff;
+        border: 1px solid #d1fae5;
+        border-radius: 8px;
+        padding: 9px 10px;
+        font-size: 12px;
+        color: #1f2937;
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .feature .icon {
+        flex: 0 0 16px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #00d97e, #00a86b);
+        color: #fff;
+        font-size: 10px;
+        line-height: 16px;
+        text-align: center;
+        font-weight: 700;
+        margin-top: 1px;
+      }
+
+      .steps {
+        background: #fff;
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-bottom: 14px;
+        border: 1px solid #d1fae5;
+      }
+      .steps h3 {
+        margin: 0 0 8px;
+        font-size: 13px;
+        color: #0f5132;
+      }
+      .steps ol {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 12.5px;
+        color: #374151;
+      }
+      .steps li { margin-bottom: 3px; }
+      .steps li b { color: #00a86b; }
+
+      .footer {
+        font-size: 11.5px;
+        color: #6b7280;
+        text-align: center;
+        margin-top: 4px;
+        padding-top: 10px;
+        border-top: 1px dashed #c6f6d5;
+      }
+      .footer a {
+        color: #00a86b;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <div class="title-wrap">
+          <div class="title">gai溜子豆包去水印工具</div>
+          <div class="ver">一键下载对话图片 / 视频<span class="badge">v2.1.0</span></div>
+        </div>
+      </div>
+
+      <p class="lead">
+        安装脚本后，打开
+        <b>doubao.com/chat</b> 与豆包对话，脚本会自动捕获它生成的所有
+        <b>图片和视频</b>，视频右下角直接点 <b>「下载无水印」</b> 即可拿到无水印原片。
+      </p>
+
+      <div class="features">
+        <div class="feature"><span class="icon">✓</span><span>无水印原图</span></div>
+        <div class="feature"><span class="icon">✓</span><span>视频直链下载</span></div>
+        <div class="feature"><span class="icon">✓</span><span>跳过重复文件</span></div>
+        <div class="feature"><span class="icon">✓</span><span>并发批量下载</span></div>
+        <div class="feature"><span class="icon">✓</span><span>自定义文件名</span></div>
+        <div class="feature"><span class="icon">✓</span><span>按展示顺序</span></div>
+      </div>
+
+      <div class="steps">
+        <h3>使用步骤</h3>
+        <ol>
+          <li>打开 <b>doubao.com/chat</b> 进入任意对话</li>
+          <li>脚本自动捕获图片/视频，右下角出现绿色<b>「下载无水印」</b>按钮</li>
+          <li>点按钮即可保存到本地，默认文件名：<code>会话_消息_序号_图片key</code></li>
+        </ol>
+      </div>
+
+      <div class="footer">
+        自学自玩自乐 · 数据保存在本地 IndexedDB · 不会上传任何信息
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "gai溜子豆包去水印工具",
+  "version": "2.1.0",
+  "description": "一键下载豆包(doubao.com)对话中的图片和视频，自动去除水印；视频右下角直接点「下载无水印」即可。",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.doubao.com/chat/*",
+        "https://www.dola.com/chat/*"
+      ],
+      "js": ["doubao-downloader.user.js"],
+      "run_at": "document_end",
+      "world": "MAIN"
+    }
+  ],
+  "permissions": ["activeTab"]
+}
